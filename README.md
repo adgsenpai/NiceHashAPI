@@ -1,4 +1,3 @@
-
 # NiceHash Python Library and Command Line Rest API
 
 ## Requirements / Modules
@@ -7,12 +6,12 @@
     
 ## Required data and where to get it
 Following data is needed:
-* api base url: 
+* API Base url: 
     * https://api2.nicehash.com - Production environment
     * https://api-test.nicehash.com - Test environment
     
-The documentation how to get organisation id, api key and api key secret is here:
-https://github.com/nicehash/rest-clients-demo
+you can get information here 
+https://www.nicehash.com/my/settings/keys for API keys/tokens
 
 ## Installation
 ```
@@ -20,30 +19,30 @@ pip install nicehash
 ```
 
 ## Library usage
-Nicehash library is contained in file `nicehash.py`. Api is divided in two part: public and private.
+Nicehash library is contained in file `nicehash.py`. Api is divided in two part: public and private. In this demo we use nicehash from `pip`
 
-Code snipplet for public api
+#### Code snipplet for public api
 
-    import nicehash
+    from nicehash import nicehash as nh
     
     host = 'https://api2.nicehash.com'
     
-    public_api = nicehash.public_api(host)
+    public_api = nh.public_api(host)
     
     buy_info = public_api.buy_info()
     print(buy_info)
   
     
-Code snipplet for private api
+#### Code snipplet for private api
     
-    import nicehash
+    from nicehash import nicehash as nh
     
     host = 'https://api2.nicehash.com'
     organisation_id = 'Enter your organisation id'
     key = 'Enter your api key'
     secret = 'Enter your secret for api key' 
     
-    private_api = nicehash.private_api(host, organisation_id, key, secret)
+    private_api = nh.private_api(host, organisation_id, key, secret)
     
     my_accounts = private_api.get_accounts()
     print(my_accounts)
@@ -85,5 +84,4 @@ Example usage:
     python nicehash.py -b https://api2.nicehash.com -o ca5622bd-bc32-451b-90a4-e9ae1088bade -k 85512ceb-4f37-426e-9fb4-929af9134ed1 -s 11260065-37f9-4875-bbdd-52a59ce7775de2c0596c-5c87-4739-bb60-b3f547612aed -m GET -p /main/api/v2/accounting/accounts/
     
     
-    
-
+### Remastered by Ashlin Darius Govindasamy into PyPi NiceHash PyPi module
