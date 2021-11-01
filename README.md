@@ -1,3 +1,5 @@
+![nicehash](https://user-images.githubusercontent.com/45560312/139673428-99ecc991-aa22-4bd1-8162-588c5f0f458a.png)
+
 # NiceHash Python Library and Command Line Rest API
 
 ## Requirements / Modules
