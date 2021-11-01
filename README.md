@@ -1,12 +1,9 @@
-# Nicehash python library and command line rest api
 
-Dependacy
-* requests
+# NiceHash Python Library and Command Line Rest API
 
-To install dependencies run following line your favorite shell console
+## Requirements / Modules
 
     pip install requests
-    
     
 ## Required data and where to get it
 Following data is needed:
@@ -16,6 +13,11 @@ Following data is needed:
     
 The documentation how to get organisation id, api key and api key secret is here:
 https://github.com/nicehash/rest-clients-demo
+
+## Installation
+```
+pip install nicehash
+```
 
 ## Library usage
 Nicehash library is contained in file `nicehash.py`. Api is divided in two part: public and private.
