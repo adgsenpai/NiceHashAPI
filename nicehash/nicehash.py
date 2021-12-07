@@ -36,7 +36,10 @@ class public_api:
                             response.reason + ": " + str(response.content))
         else:
             raise Exception(str(response.status_code) + ": " + response.reason)
-
+   
+    def get_rigs(self):
+        return self.request('GET', '/main/api/v2/mining/rigs2/', '', None)
+   
     def get_current_global_stats(self):
         return self.request('GET', '/main/api/v2/public/stats/global/current/', '', None)
 
