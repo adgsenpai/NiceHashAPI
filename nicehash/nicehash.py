@@ -37,8 +37,7 @@ class public_api:
         else:
             raise Exception(str(response.status_code) + ": " + response.reason)
    
-    def get_rigs(self):
-        return self.request('GET', '/main/api/v2/mining/rigs2/', '', None)
+
    
     def get_current_global_stats(self):
         return self.request('GET', '/main/api/v2/public/stats/global/current/', '', None)
@@ -168,7 +167,10 @@ class private_api:
                 'Settings for algorithm not found in algo_response parameter')
 
         return algo_setting
-
+    
+    def get_rigs(self):
+        return self.request('GET', '/main/api/v2/mining/rigs2/', '', None)
+    
     def get_accounts(self):
         return self.request('GET', '/main/api/v2/accounting/accounts2/', '', None)
 
